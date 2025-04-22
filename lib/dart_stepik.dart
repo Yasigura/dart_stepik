@@ -1,12 +1,18 @@
 import 'dart:io';
 
 void main() {
-  String a = stdin.readLineSync() ?? "";
-  if (a == "true") {
-    stdout.writeln("Правда");
-  } else if (a == "false") {
-    stdout.writeln("Ложь");
+  var forceA = stdin.readLineSync() ?? "0";
+  var forceB = stdin.readLineSync() ?? "0";
+  int a = int.parse(forceA) ?? 0;
+  int b = int.parse(forceB) ?? 0;
+  if (a == b) {
+    int c = a + b;
+    int d = c + a;
+    stdout.writeln(c);
+    stdout.writeln(d);
   } else {
-    stdout.writeln("Неправильное значение");
+    int c = a + b;
+    stdout.writeln(c);
+    stdout.writeln(c);
   }
 }
